@@ -1,0 +1,22 @@
+file_path: "/home/doyooni303/teaching/SK_Hynix/PBL_TAT_Set_Data Rev2(사외).xlsx"
+categorical_columns: ["oper_group", "days", "shift", "x1"]
+continuous_columns: ["x2", "x3", "x4", "x5", "x6", "x7", "x8", "x9", "x10", 
+                     "x11", "x12", "x13", "x14", "x15", "x16", "x17", "x18", 
+                     "x19", "x20", "x21"]
+target_column: "y"
+sheet_names: ["Data_Set1(사외)", "Data_Set2(사외)"]
+additional_drop_columns: ["lot_cd", "oper_area"]
+
+# 데이터 분할 비율
+train_ratio: 0.8
+val_ratio: 0.1
+test_ratio: 0.1
+
+# 시퀀스 관련 설정
+max_sequence_length: 50  # 최대 시퀀스 길이
+embedding_dim: 8         # 범주형 변수 임베딩 차원
+padding_value: -999999.0 # 패딩값 (큰 음수)
+
+# 데이터로더 설정
+batch_size: 364
+num_workers: 4
