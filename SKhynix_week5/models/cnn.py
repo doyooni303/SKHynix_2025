@@ -1,3 +1,9 @@
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from typing import List
+
+
 class CNN1DModel(nn.Module):
     """1D CNN 모델 (다중 커널) - 통합 임베딩 데이터셋용"""
 

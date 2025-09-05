@@ -1,3 +1,7 @@
+import torch
+import torch.nn as nn
+
+
 class RNNModel(nn.Module):
     """기본 RNN/LSTM/GRU 모델 - 통합 임베딩 데이터셋용"""
 

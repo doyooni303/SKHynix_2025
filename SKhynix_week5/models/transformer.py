@@ -1,3 +1,8 @@
+import torch
+import torch.nn as nn
+import numpy as np
+
+
 class PositionalEncoding(nn.Module):
     """사인/코사인 위치 인코딩"""
 

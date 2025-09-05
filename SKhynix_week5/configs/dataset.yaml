@@ -13,8 +13,8 @@ train_ratio: 0.8
 val_ratio: 0.1
 test_ratio: 0.1
 
-# 시퀀스 관련 설정 (수정 필요)
-window_size: 50          # ✅ max_sequence_length → window_size로 변경
+# 시퀀스 관련 설정
+window_size: 100          # ✅ max_sequence_length → window_size로 변경
 stride: null               # ✅ 새로 추가 (None이면 window_size와 동일)
 embedding_dim: 8
 padding_value: -9999.0   # ✅ -999999.0 → -9999.0으로 변경 (권장)

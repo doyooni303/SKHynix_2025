@@ -1,3 +1,4 @@
+import argparse
 import os
 import torch
 import torch.nn as nn
@@ -22,9 +23,15 @@ from torch.optim import Adam, AdamW
 from torch.optim.lr_scheduler import ReduceLROnPlateau, StepLR
 
 
+# 프로젝트 모듈들 import
+from utils import load_config, set_random_seeds, setup_logging
+from dataset import create_dataloaders
+from models import create_model_from_config_and_dataloader
+from train import train_model, evaluate_model
+
+
 def main():
     """메인 실행 함수"""
-    import argparse
 
     parser = argparse.ArgumentParser(description="시계열 시퀀스 모델링")
     parser.add_argument("--config-dir", default="configs", help="설정 파일 디렉토리")
@@ -35,7 +42,7 @@ def main():
     parser.add_argument("--gpu", type=int, default=0, help="GPU 번호")
     parser.add_argument("--exp-name", default=None, help="실험명")
 
-    args = parser.parse_args([])
+    args = parser.parse_args()
 
     # 설정 로드
     config = load_config(args.config_dir)
