@@ -1,3 +1,6 @@
 *.xlsx
 */*/*.pyc
 */*/*/*.pyc
+
+# results
+./sequential_models/results/*
